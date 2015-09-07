@@ -1,5 +1,5 @@
 import React  from 'react';
-import Modal  from '../index.js';
+import Modal  from '../lib/index.js';
 
 export default class Examples extends React.Component {
     constructor(props) {

@@ -1,12 +1,17 @@
 {
-  "name": "React-Modal",
-  "version": "0.0.0",
-  "description": "react-modal",
-  "main": "index.js",
-  "scripts": {},
+  "name": "React-AwesomeModal",
+  "version": "1.0.0",
+  "description": "This is a React Component.",
+  "main": "./lib/index",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git@git.corp.yahoo.co.jp:kazshiba/React-Modal.git"
+    "url": "https://github.com/shibe97/React-AwesomeModal.git"
   },
   "author": "shibe97",
   "license": "MIT",
@@ -22,5 +27,9 @@
     "babel-core": "~5.8.23",
     "babel-loader": "~5.3.2",
     "chai": "~3.2.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/shibe97/React-AwesomeModal/issues"
+  },
+  "homepage": "https://github.com/shibe97/React-AwesomeModal"
 }
