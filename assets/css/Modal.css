@@ -1,0 +1,29 @@
+.Modal__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.Modal__panel {
+  position: fixed;
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translate3d(0, 0, 0);
+  transition: transform 500ms cubic-bezier(0, 0, 0.25, 1), opacity 500ms cubic-bezier(0, 0, 0.25, 1); }
+
+.Modal__hidden {
+  display: none; }
+
+.Modal__invisible {
+  transform: translate3d(0, -100px, 0);
+  opacity: 0; }
