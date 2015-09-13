@@ -1,16 +1,10 @@
 module.exports = {
     entry: [
-        './src/index.js',
-        './examples/app.js'
+        './src/index.js'
     ],
-    output: [
-        {
-            filename: './lib/index.js'
-        },
-        {
-            filename: './examples/bundle.js'
-        },
-    ],
+    output: {
+        filename: './lib/index.js'
+    },
     module: {
         loaders: [
             { test: /\.js$/, exclude: /(node_modules|bower_components)/, loader: 'babel' },

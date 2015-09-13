@@ -1,3 +1,5 @@
+var React = require('react/addons');
+var TestUtils = React.addons.TestUtils;
 var jsdom = require('jsdom');
 var assert = require('power-assert');
 
@@ -10,4 +12,7 @@ navigator.appVersion = '';
 var Modal = require('../lib/index.js');
 
 describe('Modal', function(){
+    it('is xxxxx.', function() {
+        assert(true);
+    });
 });
