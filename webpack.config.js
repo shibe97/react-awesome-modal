@@ -7,8 +7,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /(node_modules|bower_components)/, loader: 'babel' },
-            { test: /\.css$/, loader: 'style!css' }
+            { test: /\.js$/, exclude: /(node_modules|bower_components)/, loader: 'babel' }
         ]
     }
 };
