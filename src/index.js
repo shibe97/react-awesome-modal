@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/Modal.css';
+import style from './style.js';
 
 export default class Modal extends React.Component {
     constructor(props) {
@@ -21,12 +21,12 @@ export default class Modal extends React.Component {
 
     render() {
         return (
-            <section className='Modal'>
-                <div className={this.state.visible ? 'Modal__mask' : 'Modal__mask Modal__hidden'} />
-                <div className={this.state.visible ? 'Modal__panel' : 'Modal__panel Modal__invisible'}>
+            <div>
+                <div style={this.state.visible ? style.mask : style.maskHidden} />
+                <div style={this.state.visible ? style.panel : style.panelHidden}>
                     {this.props.children}
                 </div>
-            </section>
+            </div>
         );
     }
 }

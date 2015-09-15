@@ -1,9 +1,9 @@
 module.exports = {
     entry: [
-        './src/index.js'
+        './examples/app.js'
     ],
     output: {
-        filename: './lib/index.js'
+        filename: './examples/bundle.js'
     },
     module: {
         loaders: [
