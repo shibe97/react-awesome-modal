@@ -1,6 +1,6 @@
 {
-  "name": "React-AwesomeModal",
-  "version": "1.0.0",
+  "name": "react-awesome-modal",
+  "version": "0.0.1",
   "description": "This is a React Modal Component.",
   "main": "./lib/index",
   "files": [
