@@ -12,7 +12,21 @@ navigator.appVersion = '';
 var Modal = require('../lib/index.js');
 
 describe('Modal', function(){
-    it('is xxxxx.', function() {
-        assert(true);
+    before('hoge', function(){
+      this.renderedComponent = TestUtils.renderIntoDocument(
+        <Modal visible={true}>
+          <p>this is a modal.</p>
+        </Modal>
+      );
+      this.content = TestUtils.scryRenderedDOMComponentsWithTag(
+        this.renderedComponent,
+        'p'
+      )[0];
+    });
+    it('is a React component.', function() {
+        assert(TestUtils.isCompositeComponent(this.renderedComponent));
+    });
+    it('has a corrent content.', function() {
+        assert(this.content.props.children === "this is a modal.");
     });
 });

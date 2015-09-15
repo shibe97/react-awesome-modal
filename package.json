@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel src --out-dir lib --source-maps-inline",
     "watch": "babel src --out-dir lib --watch --source-maps-inline",
-    "test": "mocha --require intelli-espower-loader test/**/*.js"
+    "test": "mocha --compilers js:babel/register test/**/*.js"
   },
   "repository": {
     "type": "git",
