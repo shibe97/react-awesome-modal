@@ -10,7 +10,7 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "babel src --out-dir lib  --source-maps-inline",
+    "build": "babel src --out-dir lib --source-maps-inline",
     "watch": "babel src --out-dir lib --watch --source-maps-inline",
     "test": "mocha --require intelli-espower-loader test/**/*.js"
   },
