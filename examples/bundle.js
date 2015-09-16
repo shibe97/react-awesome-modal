@@ -20509,7 +20509,7 @@
 	                _react2['default'].createElement('input', { type: 'button', value: 'OPEN', onClick: this.openModal.bind(this) }),
 	                _react2['default'].createElement(
 	                    _libIndexJs2['default'],
-	                    { visible: this.state.visible, closeFn: this.closeModal.bind(this) },
+	                    { visible: this.state.visible, closeFn: this.closeModal.bind(this), width: '600', height: '500' },
 	                    _react2['default'].createElement(
 	                        'div',
 	                        null,
@@ -20629,9 +20629,22 @@
 	            });
 	        }
 	    }, {
+	        key: 'getPanelStyle',
+	        value: function getPanelStyle() {
+	            if (this.props.width) {
+	                _styleJs2['default'].panel.width = this.props.width + "px";
+	                _styleJs2['default'].panel.marginLeft = "-" + this.props.width / 2 + "px";
+	            }
+	            if (this.props.height) {
+	                _styleJs2['default'].panel.height = this.props.height + "px";
+	                _styleJs2['default'].panel.marginTop = "-" + this.props.height / 2 + "px";
+	            }
+	            return this.state.visible ? _styleJs2['default'].panel : _styleJs2['default'].panelHidden;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2['default'].createElement('div', null, _react2['default'].createElement('div', { style: this.state.visible ? _styleJs2['default'].mask : _styleJs2['default'].maskHidden }), _react2['default'].createElement('div', { style: this.state.visible ? _styleJs2['default'].panel : _styleJs2['default'].panelHidden }, this.props.children));
+	            return _react2['default'].createElement('div', null, _react2['default'].createElement('div', { style: this.state.visible ? _styleJs2['default'].mask : _styleJs2['default'].maskHidden }), _react2['default'].createElement('div', { style: this.getPanelStyle() }, this.props.children));
 	        }
 	    }]);
 

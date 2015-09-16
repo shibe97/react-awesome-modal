@@ -19,11 +19,23 @@ export default class Modal extends React.Component {
         });
     }
 
+    getPanelStyle() {
+        if(this.props.width) {
+            style.panel.width = this.props.width + "px";
+            style.panel.marginLeft = "-" + this.props.width / 2 + "px";
+        }
+        if(this.props.height) {
+            style.panel.height = this.props.height + "px";
+            style.panel.marginTop = "-" + this.props.height / 2 + "px";
+        }
+        return this.state.visible ? style.panel : style.panelHidden;
+    }
+
     render() {
         return (
             <div>
                 <div style={this.state.visible ? style.mask : style.maskHidden} />
-                <div style={this.state.visible ? style.panel : style.panelHidden}>
+                <div style={this.getPanelStyle()}>
                     {this.props.children}
                 </div>
             </div>

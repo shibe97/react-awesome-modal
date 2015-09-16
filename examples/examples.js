@@ -26,7 +26,7 @@ export default class Examples extends React.Component {
             <section>
                 <h1>React-Modal Examples</h1>
                 <input type="button" value="OPEN" onClick={this.openModal.bind(this)} />
-                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)}>
+                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="600" height="500">
                     <div>
                         <h1>モーダル</h1>
                         <p>hogehogehogehogehogehogehoge</p>
