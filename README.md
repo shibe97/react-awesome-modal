@@ -12,6 +12,8 @@ $ npm i -D react-awesome-modal
 <Modal
   visible={bool}
   closeFn={function}
+  width=600
+  height=400
 >
   <div>
     <h1>title</h1>
@@ -19,6 +21,28 @@ $ npm i -D react-awesome-modal
   </div>
 </Modal>
 ```
+
+- visible
+required
+
+If visible is true, the modal shows up.
+
+- closeFn
+required
+
+must specify close function.
+
+- width
+option
+
+can set popup modal width except "px".
+ex. 600
+
+- height
+option
+
+can set popup modal height except "px".
+ex. 400
 
 ## Setup
 ```
