@@ -27,10 +27,10 @@ $ npm i -D react-awesome-modal
 - closeFn [required]
     - must specify close function.
 - width [option]
-    - can set popup modal width except "px".
+    - can set modal width except "px".
     - ex. 600
 - height [option]
-    - can set popup modal height except "px".
+    - can set modal height except "px".
     - ex. 400
 
 ## Setup
