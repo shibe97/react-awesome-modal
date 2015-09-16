@@ -23,7 +23,7 @@ $ npm i -D react-awesome-modal
 ```
 
 - visible [required]
-    -If visible is true, the modal shows up.
+    - if visible is true, the modal shows up.
 - closeFn [required]
     - must specify close function.
 - width [option]
