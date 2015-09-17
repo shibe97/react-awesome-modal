@@ -20611,8 +20611,11 @@
 	        _classCallCheck(this, Modal);
 
 	        _get(Object.getPrototypeOf(Modal.prototype), 'constructor', this).call(this, props);
+	        var effect = props.effect || 'fadeInDown';
+	        this.setSize(effect);
 	        this.state = {
-	            visible: props.visible
+	            visible: props.visible,
+	            style: _styleJs2['default'][effect]
 	        };
 	    }
 
@@ -20629,22 +20632,34 @@
 	            });
 	        }
 	    }, {
+	        key: 'setSize',
+	        value: function setSize(effect) {
+	            if (this.props.width) {
+	                _styleJs2['default'][effect].panel.width = this.props.width + 'px';
+	                _styleJs2['default'][effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
+	            }
+	            if (this.props.height) {
+	                _styleJs2['default'][effect].panel.height = this.props.height + 'px';
+	                _styleJs2['default'][effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
+	            }
+	        }
+	    }, {
 	        key: 'getPanelStyle',
 	        value: function getPanelStyle() {
 	            if (this.props.width) {
-	                _styleJs2['default'].panel.width = this.props.width + "px";
-	                _styleJs2['default'].panel.marginLeft = "-" + this.props.width / 2 + "px";
+	                _styleJs2['default'][this.props.effect].panel.width = this.props.width + 'px';
+	                _styleJs2['default'][this.props.effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
 	            }
 	            if (this.props.height) {
-	                _styleJs2['default'].panel.height = this.props.height + "px";
-	                _styleJs2['default'].panel.marginTop = "-" + this.props.height / 2 + "px";
+	                _styleJs2['default'][this.props.effect].panel.height = this.props.height + 'px';
+	                _styleJs2['default'][this.props.effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
 	            }
-	            return this.state.visible ? _styleJs2['default'].panel : _styleJs2['default'].panelHidden;
+	            return this.state.visible ? _styleJs2['default'][this.props.effect].panel : _styleJs2['default'][this.props.effect].panelHidden;
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2['default'].createElement('div', null, _react2['default'].createElement('div', { style: this.state.visible ? _styleJs2['default'].mask : _styleJs2['default'].maskHidden }), _react2['default'].createElement('div', { style: this.getPanelStyle() }, this.props.children));
+	            return _react2['default'].createElement('div', null, _react2['default'].createElement('div', { style: this.state.visible ? this.state.style.mask : this.state.style.maskHidden }), _react2['default'].createElement('div', { style: this.state.visible ? this.state.style.panel : this.state.style.panelHidden }, this.props.children));
 	        }
 	    }]);
 
@@ -20656,6 +20671,29 @@
 
 /***/ },
 /* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _effectFadeInDown = __webpack_require__(161);
+
+	var _effectFadeInDown2 = _interopRequireDefault(_effectFadeInDown);
+
+	exports['default'] = {
+	    fadeInDown: _effectFadeInDown2['default']
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 161 */
 /***/ function(module, exports) {
 
 	'use strict';

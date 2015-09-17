@@ -4,8 +4,11 @@ import style from './style.js';
 export default class Modal extends React.Component {
     constructor(props) {
         super(props);
+        let effect = props.effect || 'fadeInDown';
+        this.setSize(effect);
         this.state = {
-            visible : props.visible
+            visible : props.visible,
+            style : style[effect]
         }
     }
 
@@ -19,23 +22,34 @@ export default class Modal extends React.Component {
         });
     }
 
-    getPanelStyle() {
+    setSize(effect) {
         if(this.props.width) {
-            style.panel.width = this.props.width + "px";
-            style.panel.marginLeft = "-" + this.props.width / 2 + "px";
+            style[effect].panel.width = this.props.width + 'px';
+            style[effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
         }
         if(this.props.height) {
-            style.panel.height = this.props.height + "px";
-            style.panel.marginTop = "-" + this.props.height / 2 + "px";
+            style[effect].panel.height = this.props.height + 'px';
+            style[effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
         }
-        return this.state.visible ? style.panel : style.panelHidden;
+    }
+
+    getPanelStyle() {
+        if(this.props.width) {
+            style[this.props.effect].panel.width = this.props.width + 'px';
+            style[this.props.effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
+        }
+        if(this.props.height) {
+            style[this.props.effect].panel.height = this.props.height + 'px';
+            style[this.props.effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
+        }
+        return this.state.visible ? style[this.props.effect].panel : style[this.props.effect].panelHidden;
     }
 
     render() {
         return (
             <div>
-                <div style={this.state.visible ? style.mask : style.maskHidden} />
-                <div style={this.getPanelStyle()}>
+                <div style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} />
+                <div style={this.state.visible ? this.state.style.panel : this.state.style.panelHidden}>
                     {this.props.children}
                 </div>
             </div>
