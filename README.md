@@ -32,12 +32,12 @@ export default class Examples extends React.Component {
         return (
             <section>
                 <h1>React-Modal Examples</h1>
-                <input type="button" value="OPEN" onClick={this.openModal.bind(this)} />
+                <input type="button" value="Open" onClick={this.openModal.bind(this)} />
                 <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="400" height="300" effect="fadeInUp">
                     <div>
                         <h1>Title</h1>
-                        <p>Some Contenast</p>
-                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>閉じる</a>
+                        <p>Some Contents</p>
+                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>Close</a>
                     </div>
                 </Modal>
             </section>
@@ -57,11 +57,12 @@ export default class Examples extends React.Component {
     - String / option
     - to set how to pop-up
     - e.g. fadeInUp
-- width [option]
+- width
     - Number / option
     - to set modal width (px)
     - e.g. 500
-- height [option]
+- height
+    - Number / option
     - to set modal height (px)
     - e.g. 400
 
