@@ -5,52 +5,95 @@ This is a Customizable Modal.
 
 ## Usage
 ```
-$ npm i -D react-awesome-modal
+import React from 'react';
+import Modal from 'react-awesome-modal';
+
+export default class Examples extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        }
+    }
+
+    openModal() {
+        this.setState({
+            visible : true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            visible : false
+        });
+    }
+
+    render() {
+        return (
+            <section>
+                <h1>React-Modal Examples</h1>
+                <input type="button" value="OPEN" onClick={this.openModal.bind(this)} />
+                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="400" height="300" effect="fadeInUp">
+                    <div>
+                        <h1>Title</h1>
+                        <p>Some Contenast</p>
+                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>閉じる</a>
+                    </div>
+                </Modal>
+            </section>
+        );
+    }
+}
 ```
 
-```
-<Modal
-  visible={bool}
-  closeFn={function}
-  width=600
-  height=400
->
-  <div>
-    <h1>title</h1>
-    <p>some content</p>
-  </div>
-</Modal>
-```
-
-- visible [required]
-    - if visible is true, the modal shows up.
-- closeFn [required]
-    - must specify close function.
+## Props
+- visible
+    - Boolean / required
+    - to show or hide the dialog
+- closeFn
+    - Function / required
+    - is called when the visible turn to true
+- effect
+    - String / option
+    - to set how to pop-up
+    - e.g. fadeInUp
 - width [option]
-    - can set modal width except "px".
-    - ex. 600
+    - Number / option
+    - to set modal width (px)
+    - e.g. 500
 - height [option]
-    - can set modal height except "px".
-    - ex. 400
+    - to set modal height (px)
+    - e.g. 400
 
-## Setup
+## Effect
+- fadeInDown [default]
+- fadeInUp
+
+## How To Develop
+### Setup
 ```
 $ npm install
 ```
 
-## Build
+### Build
 ```
 $ npm run build
 ```
 
-## Watch and auto build
+### Watch and auto build
 ```
 $ npm run watch
 ```
 
-## Test
+### Test
 ```
 $ npm test
+```
+
+### Example
+```
+$ gulp webpack
+$ open examples/index.html
 ```
 
 ## License
