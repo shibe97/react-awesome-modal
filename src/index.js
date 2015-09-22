@@ -13,7 +13,10 @@ export default class Modal extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({visible : nextProps.visible});
+        this.setState({
+            visible : nextProps.visible,
+            effect  : nextProps.effect
+        });
     }
 
     toggle() {
