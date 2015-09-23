@@ -14,8 +14,7 @@ export default class Modal extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            visible : nextProps.visible,
-            effect  : nextProps.effect
+            visible : nextProps.visible
         });
     }
 
@@ -34,18 +33,6 @@ export default class Modal extends React.Component {
             style[effect].panel.height = this.props.height + 'px';
             style[effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
         }
-    }
-
-    getPanelStyle() {
-        if(this.props.width) {
-            style[this.props.effect].panel.width = this.props.width + 'px';
-            style[this.props.effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
-        }
-        if(this.props.height) {
-            style[this.props.effect].panel.height = this.props.height + 'px';
-            style[this.props.effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
-        }
-        return this.state.visible ? style[this.props.effect].panel : style[this.props.effect].panelHidden;
     }
 
     render() {

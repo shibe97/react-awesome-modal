@@ -20622,7 +20622,9 @@
 	    _createClass(Modal, [{
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
-	            this.setState({ visible: nextProps.visible });
+	            this.setState({
+	                visible: nextProps.visible
+	            });
 	        }
 	    }, {
 	        key: 'toggle',
@@ -20642,19 +20644,6 @@
 	                _styleJs2['default'][effect].panel.height = this.props.height + 'px';
 	                _styleJs2['default'][effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
 	            }
-	        }
-	    }, {
-	        key: 'getPanelStyle',
-	        value: function getPanelStyle() {
-	            if (this.props.width) {
-	                _styleJs2['default'][this.props.effect].panel.width = this.props.width + 'px';
-	                _styleJs2['default'][this.props.effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
-	            }
-	            if (this.props.height) {
-	                _styleJs2['default'][this.props.effect].panel.height = this.props.height + 'px';
-	                _styleJs2['default'][this.props.effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
-	            }
-	            return this.state.visible ? _styleJs2['default'][this.props.effect].panel : _styleJs2['default'][this.props.effect].panelHidden;
 	        }
 	    }, {
 	        key: 'render',
@@ -20738,7 +20727,8 @@
 	    'panelHidden': {
 	        'transform': 'translate3d(0, -100px, 0)',
 	        'opacity': 0,
-	        'zIndex': -1
+	        'zIndex': -1,
+	        'height': 0
 	    }
 	};
 	module.exports = exports['default'];
@@ -20784,7 +20774,8 @@
 	    'panelHidden': {
 	        'transform': 'translate3d(0, 100px, 0)',
 	        'opacity': 0,
-	        'zIndex': -1
+	        'zIndex': -1,
+	        'height': 0
 	    }
 	};
 	module.exports = exports['default'];
