@@ -1,7 +1,9 @@
-# React-AwesomeModal
+# react-awesome-modal
 [![Build Status](https://travis-ci.org/shibe97/react-awesome-modal.svg?branch=master)](https://travis-ci.org/shibe97/react-awesome-modal)
 
 This is a Customizable Modal.
+
+[http://shibe97.github.io/react-awesome-modal/](http://shibe97.github.io/react-awesome-modal/)
 
 ## Usage
 ```
