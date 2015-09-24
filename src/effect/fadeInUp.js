@@ -31,6 +31,7 @@ export default {
         'transform': 'translate3d(0, 100px, 0)',
         'opacity': 0,
         'zIndex': -1,
-        'height': 0
+        'height': 0,
+        'width': 0
     }
 };
