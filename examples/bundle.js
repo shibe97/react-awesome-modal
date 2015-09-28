@@ -20509,24 +20509,24 @@
 	                _react2['default'].createElement('input', { type: 'button', value: 'OPEN', onClick: this.openModal.bind(this) }),
 	                _react2['default'].createElement(
 	                    _libIndexJs2['default'],
-	                    { visible: this.state.visible, closeFn: this.closeModal.bind(this), width: '400', height: '300', effect: 'fadeInUp' },
+	                    { visible: this.state.visible, closeFn: this.closeModal.bind(this), width: '400', height: '300', effect: 'fadeInRight' },
 	                    _react2['default'].createElement(
 	                        'div',
 	                        null,
 	                        _react2['default'].createElement(
 	                            'h1',
 	                            null,
-	                            'モーダル'
+	                            'Title'
 	                        ),
 	                        _react2['default'].createElement(
 	                            'p',
 	                            null,
-	                            'hogehogehogehogehogehogehoge'
+	                            'Some Contents'
 	                        ),
 	                        _react2['default'].createElement(
 	                            'a',
 	                            { href: 'javascript:void(0);', onClick: this.closeModal.bind(this) },
-	                            '閉じる'
+	                            'Close'
 	                        )
 	                    )
 	                )
@@ -20680,9 +20680,19 @@
 
 	var _effectFadeInUp2 = _interopRequireDefault(_effectFadeInUp);
 
+	var _effectFadeInLeft = __webpack_require__(163);
+
+	var _effectFadeInLeft2 = _interopRequireDefault(_effectFadeInLeft);
+
+	var _effectFadeInRight = __webpack_require__(164);
+
+	var _effectFadeInRight2 = _interopRequireDefault(_effectFadeInRight);
+
 	exports['default'] = {
 	    fadeInDown: _effectFadeInDown2['default'],
-	    fadeInUp: _effectFadeInUp2['default']
+	    fadeInUp: _effectFadeInUp2['default'],
+	    fadeInLeft: _effectFadeInLeft2['default'],
+	    fadeInRight: _effectFadeInRight2['default']
 	};
 	module.exports = exports['default'];
 
@@ -20774,6 +20784,102 @@
 	    },
 	    'panelHidden': {
 	        'transform': 'translate3d(0, 100px, 0)',
+	        'opacity': 0,
+	        'zIndex': -1,
+	        'height': 0,
+	        'width': 0
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 163 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	exports['default'] = {
+	    'mask': {
+	        'position': 'fixed',
+	        'top': 0,
+	        'left': 0,
+	        'width': '100%',
+	        'height': '100%',
+	        'backgroundColor': 'rgba(0, 0, 0, 0.7)',
+	        'zIndex': 10000
+	    },
+	    'maskHidden': {
+	        'display': 'none'
+	    },
+	    'panel': {
+	        'position': 'fixed',
+	        'backgroundColor': '#fff',
+	        'width': '400px',
+	        'height': '300px',
+	        'top': '50%',
+	        'left': '50%',
+	        'marginTop': '-150px',
+	        'marginLeft': '-200px',
+	        'borderRadius': '5px',
+	        'boxSizing': 'border-box',
+	        'boxShadow': '0 2px 4px rgba(0, 0, 0, 0.3)',
+	        'transform': 'translate3d(0, 0, 0)',
+	        'transition': 'transform 500ms cubic-bezier(0, 0, 0.25, 1), opacity 500ms cubic-bezier(0, 0, 0.25, 1)',
+	        'zIndex': 10001
+	    },
+	    'panelHidden': {
+	        'transform': 'translate3d(-100px, 0, 0)',
+	        'opacity': 0,
+	        'zIndex': -1,
+	        'height': 0,
+	        'width': 0
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 164 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	exports['default'] = {
+	    'mask': {
+	        'position': 'fixed',
+	        'top': 0,
+	        'left': 0,
+	        'width': '100%',
+	        'height': '100%',
+	        'backgroundColor': 'rgba(0, 0, 0, 0.7)',
+	        'zIndex': 10000
+	    },
+	    'maskHidden': {
+	        'display': 'none'
+	    },
+	    'panel': {
+	        'position': 'fixed',
+	        'backgroundColor': '#fff',
+	        'width': '400px',
+	        'height': '300px',
+	        'top': '50%',
+	        'left': '50%',
+	        'marginTop': '-150px',
+	        'marginLeft': '-200px',
+	        'borderRadius': '5px',
+	        'boxSizing': 'border-box',
+	        'boxShadow': '0 2px 4px rgba(0, 0, 0, 0.3)',
+	        'transform': 'translate3d(0, 0, 0)',
+	        'transition': 'transform 500ms cubic-bezier(0, 0, 0.25, 1), opacity 500ms cubic-bezier(0, 0, 0.25, 1)',
+	        'zIndex': 10001
+	    },
+	    'panelHidden': {
+	        'transform': 'translate3d(100px, 0, 0)',
 	        'opacity': 0,
 	        'zIndex': -1,
 	        'height': 0,

@@ -26,11 +26,11 @@ export default class Examples extends React.Component {
             <section>
                 <h1>React-Modal Examples</h1>
                 <input type="button" value="OPEN" onClick={this.openModal.bind(this)} />
-                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="400" height="300" effect="fadeInUp">
+                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="400" height="300" effect="fadeInRight">
                     <div>
-                        <h1>モーダル</h1>
-                        <p>hogehogehogehogehogehogehoge</p>
-                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>閉じる</a>
+                        <h1>Title</h1>
+                        <p>Some Contents</p>
+                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>Close</a>
                     </div>
                 </Modal>
             </section>
