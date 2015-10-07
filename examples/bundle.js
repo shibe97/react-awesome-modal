@@ -20477,55 +20477,188 @@
 
 	        _get(Object.getPrototypeOf(Examples.prototype), 'constructor', this).call(this, props);
 	        this.state = {
-	            visible: false
+	            fadeInDown: false,
+	            fadeInUp: false,
+	            fadeInLeft: false,
+	            fadeInRight: false,
+	            effect: 'fadeInDown'
 	        };
 	    }
 
 	    _createClass(Examples, [{
-	        key: 'openModal',
-	        value: function openModal() {
+	        key: 'openFadeInDown',
+	        value: function openFadeInDown(e) {
 	            this.setState({
-	                visible: true
+	                fadeInDown: true,
+	                effect: e.target.attributes['data-effect'].value
 	            });
 	        }
 	    }, {
-	        key: 'closeModal',
-	        value: function closeModal() {
+	        key: 'closeFadeInDown',
+	        value: function closeFadeInDown() {
 	            this.setState({
-	                visible: false
+	                fadeInDown: false
+	            });
+	        }
+	    }, {
+	        key: 'openFadeInUp',
+	        value: function openFadeInUp(e) {
+	            this.setState({
+	                fadeInUp: true,
+	                effect: e.target.attributes['data-effect'].value
+	            });
+	        }
+	    }, {
+	        key: 'closeFadeInUp',
+	        value: function closeFadeInUp() {
+	            this.setState({
+	                fadeInUp: false
+	            });
+	        }
+	    }, {
+	        key: 'openFadeInLeft',
+	        value: function openFadeInLeft(e) {
+	            this.setState({
+	                fadeInLeft: true,
+	                effect: e.target.attributes['data-effect'].value
+	            });
+	        }
+	    }, {
+	        key: 'closeFadeInLeft',
+	        value: function closeFadeInLeft() {
+	            this.setState({
+	                fadeInLeft: false
+	            });
+	        }
+	    }, {
+	        key: 'openFadeInRight',
+	        value: function openFadeInRight(e) {
+	            this.setState({
+	                fadeInRight: true,
+	                effect: e.target.attributes['data-effect'].value
+	            });
+	        }
+	    }, {
+	        key: 'closeFadeInRight',
+	        value: function closeFadeInRight() {
+	            this.setState({
+	                fadeInRight: false
 	            });
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2['default'].createElement(
-	                'section',
+	                'div',
 	                null,
 	                _react2['default'].createElement(
-	                    'h1',
+	                    'ul',
 	                    null,
-	                    'React-Modal Examples'
-	                ),
-	                _react2['default'].createElement('input', { type: 'button', value: 'OPEN', onClick: this.openModal.bind(this) }),
-	                _react2['default'].createElement(
-	                    _libIndexJs2['default'],
-	                    { visible: this.state.visible, closeFn: this.closeModal.bind(this), width: '400', height: '300', effect: 'fadeInRight' },
 	                    _react2['default'].createElement(
-	                        'div',
+	                        'li',
 	                        null,
 	                        _react2['default'].createElement(
-	                            'h1',
-	                            null,
-	                            'Title'
-	                        ),
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.openFadeInDown.bind(this), 'data-effect': 'fadeInDown' },
+	                            'fadeInDown'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'li',
+	                        null,
 	                        _react2['default'].createElement(
-	                            'p',
-	                            null,
-	                            'Some Contents'
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.openFadeInUp.bind(this), 'data-effect': 'fadeInUp' },
+	                            'fadeInUp'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.openFadeInLeft.bind(this), 'data-effect': 'fadeInLeft' },
+	                            'fadeInLeft'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.openFadeInRight.bind(this), 'data-effect': 'fadeInRight' },
+	                            'fadeInRight'
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libIndexJs2['default'],
+	                    { visible: this.state.fadeInDown, width: '400', height: '300', effect: 'fadeInDown' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'Modal' },
+	                        _react2['default'].createElement(
+	                            'h1',
+	                            { className: 'Modal__title' },
+	                            'FadeInDown'
 	                        ),
 	                        _react2['default'].createElement(
 	                            'a',
-	                            { href: 'javascript:void(0);', onClick: this.closeModal.bind(this) },
+	                            { href: 'javascript:void(0);', onClick: this.closeFadeInDown.bind(this) },
+	                            'Close'
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libIndexJs2['default'],
+	                    { visible: this.state.fadeInUp, width: '500', height: '400', effect: 'fadeInUp' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'Modal' },
+	                        _react2['default'].createElement(
+	                            'h1',
+	                            { className: 'Modal__title' },
+	                            'FadeInUp'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.closeFadeInUp.bind(this) },
+	                            'Close'
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libIndexJs2['default'],
+	                    { visible: this.state.fadeInLeft, width: '600', height: '500', effect: 'fadeInLeft' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'Modal' },
+	                        _react2['default'].createElement(
+	                            'h1',
+	                            { className: 'Modal__title' },
+	                            'FadeInLeft'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.closeFadeInLeft.bind(this) },
+	                            'Close'
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libIndexJs2['default'],
+	                    { visible: this.state.fadeInRight, width: '700', height: '600', effect: 'fadeInRight' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'Modal' },
+	                        _react2['default'].createElement(
+	                            'h1',
+	                            { className: 'Modal__title' },
+	                            'FadeInRight'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'javascript:void(0);', onClick: this.closeFadeInRight.bind(this) },
 	                            'Close'
 	                        )
 	                    )
@@ -20625,6 +20758,7 @@
 	            this.setState({
 	                visible: nextProps.visible
 	            });
+	            this.setSize(nextProps.effect);
 	        }
 	    }, {
 	        key: 'toggle',

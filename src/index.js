@@ -16,6 +16,7 @@ export default class Modal extends React.Component {
         this.setState({
             visible : nextProps.visible
         });
+        this.setSize(nextProps.effect);
     }
 
     toggle() {
