@@ -35,7 +35,7 @@ export default class Examples extends React.Component {
             <section>
                 <h1>React-Modal Examples</h1>
                 <input type="button" value="Open" onClick={this.openModal.bind(this)} />
-                <Modal visible={this.state.visible} closeFn={this.closeModal.bind(this)} width="400" height="300" effect="fadeInUp">
+                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp">
                     <div>
                         <h1>Title</h1>
                         <p>Some Contents</p>
@@ -52,9 +52,6 @@ export default class Examples extends React.Component {
 - visible
     - Boolean / required
     - to show or hide the dialog
-- closeFn
-    - Function / required
-    - is called when the visible turn to true
 - effect
     - String / option
     - to set how to pop-up
@@ -71,6 +68,8 @@ export default class Examples extends React.Component {
 ## Effect
 - fadeInDown [default]
 - fadeInUp
+- fadeInLeft
+- fadeInRight
 
 ## How To Develop
 ### Setup
