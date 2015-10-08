@@ -32,6 +32,7 @@ export default {
         'opacity': 0,
         'zIndex': -1,
         'height': 0,
-        'width': 0
+        'width': 0,
+        'overflow': 'hidden'
     }
 };
