@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Examples from './examples.js';
 
-React.render(
+ReactDOM.render(
     <Examples />,
     document.getElementById('App')
 );

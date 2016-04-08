@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import style from './style.js';
 
-export default class Modal extends React.Component {
+export default class Modal extends Component {
     constructor(props) {
         super(props);
         let effect = props.effect || 'fadeInDown';
