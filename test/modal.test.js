@@ -1,32 +1,18 @@
-var React = require('react/addons');
-var TestUtils = React.addons.TestUtils;
-var jsdom = require('jsdom');
-var assert = require('power-assert');
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+import assert from 'power-assert';
+import Modal from '../lib/index';
+const renderer = TestUtils.createRenderer();
 
-global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
-global.window = document.parentWindow;
-global.navigator = window.navigator = {};
-navigator.userAgent = "NodeJS JsDom";
-navigator.appVersion = '';
-
-var Modal = require('../lib/index.js');
-
-describe('Modal', function(){
-    before('hoge', function(){
-      this.renderedComponent = TestUtils.renderIntoDocument(
-        <Modal visible={true}>
-          <p>this is a modal.</p>
-        </Modal>
-      );
-      this.content = TestUtils.scryRenderedDOMComponentsWithTag(
-        this.renderedComponent,
-        'p'
-      )[0];
-    });
-    it('is a React component.', function() {
-        assert(TestUtils.isCompositeComponent(this.renderedComponent));
-    });
-    it('has a corrent content.', function() {
-        assert(this.content.props.children === "this is a modal.");
+describe('Modal', () => {
+    it('can apply input width and height', () => {
+        renderer.render(
+            <Modal visible={true} width="600" height="500">
+                <p>this is a modal.</p>
+            </Modal>
+        );
+        const output = renderer.getRenderOutput();
+        assert(output.props.children[1].props.style.width === "600px" && output.props.children[1].props.style.height === "500px");
     });
 });
+
