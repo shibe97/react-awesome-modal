@@ -49,21 +49,12 @@ export default class Examples extends React.Component {
 ```
 
 ## Props
-- visible
-    - Boolean / required
-    - to show or hide the dialog
-- effect
-    - String / option
-    - to set how to pop-up
-    - e.g. fadeInUp
-- width
-    - Number / option
-    - to set modal width (px)
-    - e.g. 500
-- height
-    - Number / option
-    - to set modal height (px)
-    - e.g. 400
+| Attribute | Required | Type    | description                | example                      |
+|:----------|:---------|:--------|:---------------------------|:-----------------------------|
+| visible   | required | Boolean | to show or hide the dialog | -                            |
+| effect    | option   | String  | to set how to pop-up       | fadeInUp, fadeInDown, etc... |
+| width     | option   | Number  | to set modal width (px)    | 500                          |
+| height    | option   | Number  | to set modal height (px)   | 400                          |
 
 ## Effect
 - fadeInDown [default]
@@ -94,8 +85,7 @@ $ npm test
 
 ### Example
 ```
-$ gulp webpack
-$ open examples/index.html
+$ npm run example
 ```
 
 ## License

@@ -18,7 +18,8 @@
   "scripts": {
     "build": "babel src --out-dir lib --source-maps-inline",
     "watch": "babel src --out-dir lib --watch --source-maps-inline",
-    "test": "mocha --compilers js:babel/register test/**/*.js"
+    "test": "mocha --compilers js:babel/register test/**/*.js",
+    "example": "gulp webpack && open examples/index.html" 
   },
   "repository": {
     "type": "git",
