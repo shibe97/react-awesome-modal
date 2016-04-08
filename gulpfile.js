@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 var webpackConfig = require('./webpack.config.js');
 
 gulp.task('watch', function(){
