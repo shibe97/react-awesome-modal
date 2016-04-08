@@ -1,7 +1,7 @@
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import assert from 'power-assert';
-import Modal from '../lib/index';
+import Modal from '../src/index';
 const renderer = TestUtils.createRenderer();
 
 describe('Modal', () => {
