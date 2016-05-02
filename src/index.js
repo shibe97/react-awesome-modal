@@ -26,11 +26,11 @@ export default class Modal extends Component {
     }
 
     setSize(effect) {
-        if(this.props.width) {
+        if(this.props && this.props.width) {
             style[effect].panel.width = this.props.width + 'px';
             style[effect].panel.marginLeft = '-' + this.props.width / 2 + 'px';
         }
-        if(this.props.height) {
+        if(this.props && this.props.height) {
             style[effect].panel.height = this.props.height + 'px';
             style[effect].panel.marginTop = '-' + this.props.height / 2 + 'px';
         }
