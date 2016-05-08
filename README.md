@@ -6,7 +6,7 @@ This is a Customizable Modal.
 [http://shibe97.github.io/react-awesome-modal/](http://shibe97.github.io/react-awesome-modal/)
 
 ## Usage
-```
+```javascript
 import React from 'react';
 import Modal from 'react-awesome-modal';
 
