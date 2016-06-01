@@ -5,6 +5,8 @@ This is a Customizable Modal.
 
 [http://shibe97.github.io/react-awesome-modal/](http://shibe97.github.io/react-awesome-modal/)
 
+![demo](./assets/images/demo.gif)
+
 ## Usage
 ```javascript
 import React from 'react';
