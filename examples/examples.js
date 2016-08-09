@@ -74,25 +74,25 @@ export default class Examples extends Component {
                     <li><a href="javascript:void(0);" onClick={this.openFadeInLeft.bind(this)} data-effect="fadeInLeft">fadeInLeft</a></li>
                     <li><a href="javascript:void(0);" onClick={this.openFadeInRight.bind(this)} data-effect="fadeInRight">fadeInRight</a></li>
                 </ul>
-                <Modal visible={this.state.fadeInDown} width="400" height="300" effect="fadeInDown">
+                <Modal visible={this.state.fadeInDown} width="400" height="300" effect="fadeInDown" onClickAway={this.closeFadeInDown.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInDown</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInDown.bind(this)}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInUp} width="500" height="400" effect="fadeInUp">
+                <Modal visible={this.state.fadeInUp} width="500" height="400" effect="fadeInUp" onClickAway={this.closeFadeInUp.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInUp</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInUp.bind(this)}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInLeft} width="600" height="500" effect="fadeInLeft">
+                <Modal visible={this.state.fadeInLeft} width="600" height="500" effect="fadeInLeft" onClickAway={this.closeFadeInLeft.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInLeft</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInLeft.bind(this)}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInRight} width="700" height="600" effect="fadeInRight">
+                <Modal visible={this.state.fadeInRight} width="700" height="600" effect="fadeInRight" onClickAway={this.closeFadeInRight.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInRight</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInRight.bind(this)}>Close</a>
