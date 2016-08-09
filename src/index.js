@@ -19,12 +19,6 @@ export default class Modal extends Component {
         this.setSize(nextProps.effect);
     }
 
-    toggle() {
-        this.setState({
-            visible : !this.state.visible
-        });
-    }
-
     setSize(effect) {
         if(this.props && this.props.width) {
             style[effect].panel.width = this.props.width + 'px';
