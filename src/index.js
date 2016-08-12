@@ -19,12 +19,6 @@ export default class Modal extends Component {
         this.setSize(nextProps.effect);
     }
 
-    toggle() {
-        this.setState({
-            visible : !this.state.visible
-        });
-    }
-
     setSize(effect) {
         if(this.props && this.props.width) {
             style[effect].panel.width = this.props.width + 'px';
@@ -39,7 +33,7 @@ export default class Modal extends Component {
     render() {
         return (
             <div>
-                <div style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} />
+                <div onClick={this.props.onClickAway ? this.props.onClickAway : false} style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} />
                 <div style={this.state.visible ? this.state.style.panel : this.state.style.panelHidden}>
                     {this.props.children}
                 </div>
