@@ -37,7 +37,7 @@ export default class Examples extends React.Component {
             <section>
                 <h1>React-Modal Examples</h1>
                 <input type="button" value="Open" onClick={this.openModal.bind(this)} />
-                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp">
+                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={this.closeModal.bind(this)}>
                     <div>
                         <h1>Title</h1>
                         <p>Some Contents</p>
@@ -51,12 +51,13 @@ export default class Examples extends React.Component {
 ```
 
 ## Props
-| Attribute | Required | Type    | description                | example                      |
-|:----------|:---------|:--------|:---------------------------|:-----------------------------|
-| visible   | required | Boolean | to show or hide the dialog | -                            |
-| effect    | option   | String  | to set how to pop-up       | fadeInUp, fadeInDown, etc... |
-| width     | option   | Number  | to set modal width (px)    | 500                          |
-| height    | option   | Number  | to set modal height (px)   | 400                          |
+| Attribute   | Required | Type     | description                                 | example                      |
+|:------------|:---------|:---------|:--------------------------------------------|:-----------------------------|
+| visible     | required | Boolean  | to show or hide the dialog                  | false                        |
+| effect      | option   | String   | to set how to pop-up                        | fadeInUp, fadeInDown, etc... |
+| width       | option   | Number   | to set modal width (px)                     | 500                          |
+| height      | option   | Number   | to set modal height (px)                    | 400                          |
+| onClickAway | option   | Function | to set actions when the user click the mask | -                            |
 
 ## Effect
 - fadeInDown [default]
