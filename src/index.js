@@ -17,10 +17,10 @@ class Modal extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        this.setSize(nextProps.effect);
         this.setState({
             visible : nextProps.visible
         });
-        this.setSize(nextProps.effect);
     }
 
     setSize(props, effect, backgroundStyle) {
