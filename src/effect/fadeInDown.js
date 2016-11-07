@@ -26,7 +26,7 @@ export default {
         'zIndex': 10001
     },
     'panelHidden': {
-        'transform': 'translate3d(-50%, calc(-50% - 100px), 0)',
+        'transform': 'translate3d(0, -100px, 0)',
         'opacity': 0,
         'zIndex': -1,
         'height': 0,

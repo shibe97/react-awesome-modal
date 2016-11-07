@@ -33,19 +33,18 @@ class Modal extends Component {
                 style[effect].panel.height = props.height + 'px';
                 style[effect].panel.marginTop = '-' + props.height / 2 + 'px';
             }
-            if(props.screenWidth && props.screenHeight){
-                backgroundStyle.width = props.screenWidth;
-                backgroundStyle.height = props.screenHeight;
-                backgroundStyle.position = 'fixed';
-                backgroundStyle.top = 0;
-                backgroundStyle.left = 0;
+            if(props.screenWidth){
+                backgroundStyle.width = props.screenWidth
+            }
+            if(props.screenHeight){
+                backgroundStyle.width = props.screenWidth
             }
             if(props.calculatePosition){
                 if(props.screenWidth){
-                    style[effect].panel.left = props.screenWidth / 2;
+                    style[effect].panel.width = props.screenWidth / 2;
                 }
                 if(props.screenHeight){
-                    style[effect].panel.top = props.screenHeight / 2;
+                    style[effect].panel.height = props.screenHeight / 2;
                 }
             }
         }
@@ -53,7 +52,7 @@ class Modal extends Component {
 
     render() {
         return (
-            <div>
+            <div style={this.state.backgroundStyle}>
                 <div onClick={this.props.onClickAway ? this.props.onClickAway : false} style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} />
                 <div style={this.state.visible ? this.state.style.panel : this.state.style.panelHidden}>
                     {this.props.children}
