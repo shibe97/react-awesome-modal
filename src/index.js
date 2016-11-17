@@ -17,6 +17,36 @@ export default class Modal extends Component {
             visible : nextProps.visible
         });
         this.setSize(nextProps.effect);
+        this.setStyles(nextProps.effect);
+    }
+
+    setStyles(effect){
+      if(this.props && this.props.styles){
+        Object.keys(this.props.styles).forEach((key)=>{
+          style[effect].panel[key] = this.props.styles[key];
+          if(key === 'width'){
+            if(this.props.styles[key].charAt(this.props.styles[key].length-1) === '%'){
+              const width = this.props.styles[key].slice(0,-1);
+              style[effect].panel.marginLeft = '-' + width / 2 + '%';
+            }else if(this.props.styles[key].charAt(this.props.styles[key].length-1) === 'x'){
+              const width = this.props.styles[key].slice(0,-2);
+              style[effect].panel.marginLeft = '-' + width / 2 + 'px';
+            }else{
+              style[effect].panel.marginLeft = '-' + width / 2 + 'px';
+            }
+          }else if(key === 'height'){
+            if(this.props.styles[key].charAt(this.props.styles[key].length-1) === '%'){
+              const height = this.props.styles[key].slice(0,-1);
+              style[effect].panel.marginTop = '-' + height / 2 + '%';
+            }else if(this.props.styles[key].charAt(this.props.styles[key].length-1) === 'x'){
+              const height = this.props.styles[key].slice(0,-2);
+              style[effect].panel.marginTop = '-' + height / 2 + 'px';
+            }else{
+              style[effect].panel.marginTop = '-' + height / 2 + 'px';
+            }
+          }
+        });
+      }
     }
 
     setSize(effect) {
