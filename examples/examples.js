@@ -86,13 +86,13 @@ export default class Examples extends Component {
                         <a href="javascript:void(0);" onClick={this.closeFadeInUp.bind(this)}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInLeft} width="600" height="500" effect="fadeInLeft" onClickAway={this.closeFadeInLeft.bind(this)}>
+                <Modal visible={this.state.fadeInLeft} width="600px" height="100px" effect="fadeInLeft" onClickAway={this.closeFadeInLeft.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInLeft</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInLeft.bind(this)}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInRight} width="700" height="600" effect="fadeInRight" onClickAway={this.closeFadeInRight.bind(this)}>
+                <Modal visible={this.state.fadeInRight} width="80%" height="40%" styles={{backgroundColor : '#333'}} effect="fadeInRight" onClickAway={this.closeFadeInRight.bind(this)}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInRight</h1>
                         <a href="javascript:void(0);" onClick={this.closeFadeInRight.bind(this)}>Close</a>
