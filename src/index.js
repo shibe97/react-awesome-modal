@@ -50,8 +50,8 @@ export default class Modal extends Component {
           if(this.props.height.charAt(this.props.height.length-1) === '%'){
             //Use Percentage
             const height = this.props.height.slice(0,-1);
-            style[effect].panel.height = height + '%';
-            style[effect].panel.marginTop = '-' + height / 2 + '%';
+            style[effect].panel.height = height + 'vh';
+            style[effect].panel.marginTop = '-' + height / 2 + 'vh';
           }else if(this.props.height.charAt(this.props.height.length-1) === 'x'){
             //Use Pixels
             const height = this.props.height.slice(0,-2);
