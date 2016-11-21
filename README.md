@@ -9,10 +9,10 @@ This is a Customizable Modal.
 
 ## Usage
 ```javascript
-import React from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 
-export default class Examples extends React.Component {
+export default class Examples extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,12 +36,12 @@ export default class Examples extends React.Component {
         return (
             <section>
                 <h1>React-Modal Examples</h1>
-                <input type="button" value="Open" onClick={this.openModal.bind(this)} />
-                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={this.closeModal.bind(this)}>
+                <input type="button" value="Open" onClick={() => this.openModal()} />
+                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
                     <div>
                         <h1>Title</h1>
                         <p>Some Contents</p>
-                        <a href="javascript:void(0);" onClick={this.closeModal.bind(this)}>Close</a>
+                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>
                 </Modal>
             </section>
@@ -55,8 +55,8 @@ export default class Examples extends React.Component {
 |:------------|:---------|:---------|:--------------------------------------------|:-----------------------------|
 | visible     | required | Boolean  | to show or hide the dialog                  | false                        |
 | effect      | option   | String   | to set how to pop-up                        | fadeInUp, fadeInDown, etc... |
-| width       | option   | Number   | to set modal width (px)                     | 500                          |
-| height      | option   | Number   | to set modal height (px)                    | 400                          |
+| width       | option   | Number   | to set modal width (px or %)                | 500, 500px, 80%              |
+| height      | option   | Number   | to set modal height (px or %)               | 400, 400px, 50%              |
 | onClickAway | option   | Function | to set actions when the user click the mask | -                            |
 
 ## Effect
@@ -86,9 +86,9 @@ $ npm run watch
 $ npm test
 ```
 
-### Example
+### Docs
 ```
-$ npm run example
+$ npm run docs
 ```
 
 ## License
