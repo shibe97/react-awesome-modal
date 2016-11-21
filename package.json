@@ -19,7 +19,8 @@
     "build": "babel src --out-dir lib --source-maps-inline",
     "watch": "babel src --out-dir lib --watch --source-maps-inline",
     "test": "mocha --compilers js:babel-core/register test/**/*.js",
-    "example": "gulp build && open examples/index.html"
+    "docs": "gulp build && open docs/index.html",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -36,11 +37,12 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "gulp": "^3.9.0",
+    "gulp-sass": "^2.3.2",
     "mocha": "~2.3.2",
     "power-assert": "~1.0.0",
-    "react": "^15.0.1",
-    "react-addons-test-utils": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.4.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-dom": "^15.4.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "bugs": {
