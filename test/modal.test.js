@@ -5,7 +5,7 @@ import Modal from '../src/index';
 const renderer = TestUtils.createRenderer();
 
 describe('Modal', () => {
-    it('can apply input width and height', () => {
+    it('the default unit is px.', () => {
         renderer.render(
             <Modal visible={true} width="600" height="500">
                 <p>this is a modal.</p>

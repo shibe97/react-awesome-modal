@@ -1,0 +1,114 @@
+@import "reset";
+
+.Wrapper {
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.Area {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@media screen and (max-width: 600px) {
+    .Area {
+        width: auto;
+        margin: auto;
+    }
+}
+
+.Content {
+    padding-top: 100px;
+
+    &__title {
+        font-size: 200%;
+    }
+
+    &__description {
+        color: #666;
+    }
+
+    &__step {
+        color: #666;
+        padding: 40px 0 10px;
+    }
+
+    &__list {
+        padding-top: 40px;
+        line-height: 2;
+    }
+
+    &__table {
+        width: 100%;
+        color: #666;
+
+        tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+
+        th {
+            border-bottom: 4px solid #ccc;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 20px;
+
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.Top {
+    background-color: #39a7c5;
+    padding: 100px 0;
+
+    &__title {
+        font-size: 300%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    &__description {
+        color: #fff;
+    }
+
+    &__github {
+        padding-top: 40px;
+    }
+}
+
+.Modal {
+    text-align: center;
+    
+    &__title {
+        padding-top: 90px;
+        font-size: 200%;
+    }
+}
+
+.Footer {
+    background-color: #ccc;
+    margin-top: 100px;
+    padding: 100px 0;
+    color: #888;
+
+    &__title {
+        color: #666;
+        font-size: 150%;
+    }
+
+    &__license {
+        padding-top: 20px;
+    }
+}
+
+.hljs {
+    background: #fff;
+    line-height: 1.5;
+    padding: 0.5em 2em;
+    font-size: 120%;
+}

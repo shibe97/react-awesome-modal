@@ -12,12 +12,12 @@ export default class Modal extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps({visible, effect = 'fadeInDown'}) {
         this.setState({
-            visible : nextProps.visible
+            visible : visible
         });
-        this.setSize(nextProps.effect);
-        this.setStyles(nextProps.effect);
+        this.setSize(effect);
+        this.setStyles(effect);
     }
 
     setStyles(effect){

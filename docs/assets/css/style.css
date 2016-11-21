@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* ----------------------------------------------------
+* reset style
+* -------------------------------------------------- */
+/* for new HTML5 elements */
+section, article, aside, hgroup, header, footer, nav, figure, figcaption, summary {
+  display: block; }
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", Verdana, Geneva, Arial, Helvetica;
+  word-wrap: break-word;
+  word-break: break-all; }
+
+body, div,
+dl, dt, dd,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code,
+form, fieldset, legend, input, textarea,
+p, blockquote,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+address, cite, dfn, em, strong, var, th, ins, del, samp {
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+table {
+  font-size: inherit;
+  font: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+li {
+  list-style-type: none; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%; }
+
+pre, code, kbd, samp, tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%; }
+
+caption, th {
+  text-align: left; }
+
+fieldset,
+a img {
+  border: none; }
+
+a {
+  color: #39a7c5; }
+
+hr, legend {
+  display: none; }
+
+object,
+embed {
+  vertical-align: top; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End hide from IE-mac */
+.Wrapper {
+  background-color: #eee;
+  overflow: hidden; }
+
+.Area {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+@media screen and (max-width: 600px) {
+  .Area {
+    width: auto;
+    margin: auto; } }
+
+.Content {
+  padding-top: 100px; }
+  .Content__title {
+    font-size: 200%; }
+  .Content__description {
+    color: #666; }
+  .Content__step {
+    color: #666;
+    padding: 40px 0 10px; }
+  .Content__list {
+    padding-top: 40px;
+    line-height: 2; }
+  .Content__table {
+    width: 100%;
+    color: #666; }
+    .Content__table tr:nth-child(even) {
+      background-color: #f3f3f3; }
+    .Content__table th {
+      border-bottom: 4px solid #ccc;
+      padding: 20px;
+      font-weight: bold; }
+    .Content__table td {
+      padding: 20px; }
+      .Content__table td:first-child {
+        font-weight: bold; }
+
+.Top {
+  background-color: #39a7c5;
+  padding: 100px 0; }
+  .Top__title {
+    font-size: 300%;
+    font-weight: bold;
+    color: #fff; }
+  .Top__description {
+    color: #fff; }
+  .Top__github {
+    padding-top: 40px; }
+
+.Modal {
+  text-align: center; }
+  .Modal__title {
+    padding-top: 90px;
+    font-size: 200%; }
+
+.Footer {
+  background-color: #ccc;
+  margin-top: 100px;
+  padding: 100px 0;
+  color: #888; }
+  .Footer__title {
+    color: #666;
+    font-size: 150%; }
+  .Footer__license {
+    padding-top: 20px; }
+
+.hljs {
+  background: #fff;
+  line-height: 1.5;
+  padding: 0.5em 2em;
+  font-size: 120%; }
