@@ -53,10 +53,10 @@ $ npm i -S react-awesome-modal
                     <div class="Code">
                         <pre>
                             <code class="javascript">
-import React from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 
-export default class Examples extends React.Component {
+export default class Examples extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -80,16 +80,18 @@ export default class Examples extends React.Component {
         return (
             &lt;section&gt;
                 &lt;h1&gt;React-Modal Examples&lt;/h1&gt;
-                &lt;input type="button" value="Open" onClick={this.openModal.bind(this)} /&gt;
+                &lt;input type="button" value="Open" onClick={() => this.openModal()} /&gt;
                 &lt;Modal 
                     visible={this.state.visible}
                     width="400"
                     height="300"
-                    effect="fadeInUp"&gt;
+                    effect="fadeInUp"
+                    onClickAway={() => this.closeModal()}
+                &gt;
                     &lt;div&gt;
                         &lt;h1&gt;Title&lt;/h1&gt;
                         &lt;p&gt;Some Contents&lt;/p&gt;
-                        &lt;a href="javascript:void(0);" onClick={this.closeModal.bind(this)}&gt;Close&lt;/a&gt;
+                        &lt;a href="javascript:void(0);" onClick={() => this.closeModal()}&gt;Close&lt;/a&gt;
                     &lt;/div&gt;
                 &lt;/Modal&gt;
             &lt;/section&gt;
@@ -135,6 +137,13 @@ export default class Examples extends React.Component {
                             <td>Number</td>
                             <td>to set modal height (the default is 'px'. '%' can be also used.)</td>
                             <td>400, 400px, 40%</td>
+                        </tr>
+                        <tr>
+                            <td>onClickAway</td>
+                            <td>option</td>
+                            <td>Function</td>
+                            <td>to set actions when the user click the mask</td>
+                            <td>-</td>
                         </tr>
                     </table>
                 </div>  
