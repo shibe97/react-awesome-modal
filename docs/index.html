@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>react-awesome-modal | React Component</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <meta name="description" content="react-awesome-modal is a component for react application.">
+        <meta name="keywords" content="react,modal,awesome,component,react-component,react-modal">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="react-awesome-modal">
+        <meta property="og:description" content="react-awesome-modal is a component for react application.">
+        <meta property="og:url" content="http://shibe97.github.io/react-awesome-modal/">
+        <meta property="og:image" content="http://shibe97.github.io/react-awesome-modal/assets/images/ogp.png">
+        <meta property="og:site_name" content="react-awesome-modal">
+        <meta property="og:locale" content="en_us">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@shibe97">
+    </head>
+    <body>
+        <div class="Wrapper">
+            <a href="https://github.com/shibe97/react-awesome-modal"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+            <div class="Top">
+                <div class="Area">
+                    <h1 class="Top__title">react-awesome-modal</h1>
+                    <p class="Top__description">This is a React component. You can easily set up the modal.</p>
+                    <div class="Top__github">
+                        <iframe src="https://ghbtns.com/github-btn.html?user=shibe97&repo=react-awesome-modal&type=star&count=false&size=large" frameborder="0" scrolling="0" width="90px" height="30px"></iframe>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=shibe97&repo=react-awesome-modal&type=fork&count=false&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+                    </div>
+                </div>  
+            </div>
+            <section class="Content">
+                <div class="Area">
+                    <h2 class="Content__title">Demo</h2>
+                    <p class="Content__description">Now, there are four effects. I'll add to them gradually.</p>
+                    <div id="App" class="Content__list"></div>
+                </div>  
+            </section>
+            <section class="Content">
+                <div class="Area">
+                    <h2 class="Content__title">Usage</h2>
+                    <p class="Content__step">First, download by npm.</p>
+                    <div class="Code">
+                        <pre>
+                            <code>
+$ npm i -S react-awesome-modal
+                            </code>
+                        </pre>
+                    </div>  
+                    <p class="Content__step">In your react application, import(require) and use.<br>ES6 style is as below.</p>
+                    <div class="Code">
+                        <pre>
+                            <code class="javascript">
+import React from 'react';
+import Modal from 'react-awesome-modal';
+
+export default class Examples extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        }
+    }
+
+    openModal() {
+        this.setState({
+            visible : true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            visible : false
+        });
+    }
+
+    render() {
+        return (
+            &lt;section&gt;
+                &lt;h1&gt;React-Modal Examples&lt;/h1&gt;
+                &lt;input type="button" value="Open" onClick={this.openModal.bind(this)} /&gt;
+                &lt;Modal 
+                    visible={this.state.visible}
+                    width="400"
+                    height="300"
+                    effect="fadeInUp"&gt;
+                    &lt;div&gt;
+                        &lt;h1&gt;Title&lt;/h1&gt;
+                        &lt;p&gt;Some Contents&lt;/p&gt;
+                        &lt;a href="javascript:void(0);" onClick={this.closeModal.bind(this)}&gt;Close&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/Modal&gt;
+            &lt;/section&gt;
+        );
+    }
+}
+                            </code>
+                        </pre>
+                    </div>  
+                    <p class="Content__step">Refer to the following for the attributes.</p>
+                    <table class="Content__table">
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Required</th>
+                            <th>Type</th>
+                            <th>description</th>
+                            <th>example</th>
+                        </tr>
+                        <tr>
+                            <td>visible</td>
+                            <td>required</td>
+                            <td>Boolean</td>
+                            <td>to show or hide the dialog</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>effect</td>
+                            <td>option</td>
+                            <td>String</td>
+                            <td>to set how to pop-up</td>
+                            <td>fadeInUp, fadeInDown, etc...</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>option</td>
+                            <td>Number</td>
+                            <td>to set modal width (the default is 'px'. '%' can be also used.)</td>
+                            <td>500, 500px, 80%</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>option</td>
+                            <td>Number</td>
+                            <td>to set modal height (the default is 'px'. '%' can be also used.)</td>
+                            <td>400, 400px, 40%</td>
+                        </tr>
+                    </table>
+                </div>  
+            </section>
+            <footer class="Footer">
+                <div class="Area">
+                    <h2 class="Footer__title">react-awesome-modal</h2>
+                    <p class="Footer__license">react-awesome-modal is released under <a href="https://github.com/shibe97/react-awesome-modal/blob/master/LICENSE" target="license">MIT license</a>.</p>
+                    <p class="Footer__copyright">Copyright © 2016 Kazuki Shibata </p>
+                    <p><a href="https://github.com/shibe97" target="github">GitHub</a> / <a href="https://twitter.com/shibe97" target="twitter">Twitter</a></p>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+        <script src="assets/js/bundle.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-18027176-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
