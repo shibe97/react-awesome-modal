@@ -11,21 +11,36 @@ export default {
     'maskHidden': {
         'display': 'none'
     },
-    'panel': {
+    'container': {
         'position': 'fixed',
+        'top': 0,
+        'left': 0,
+        'width': '100%',
+        'height': '100%',
+        'display': 'flex',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+        'zIndex': 10001
+    },
+    'containerHidden': {
+        'position': 'fixed',
+        'top': 0,
+        'left': 0,
+        'width': '100%',
+        'height': '100%',
+        'display': 'flex',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+        'zIndex': -1
+    },
+    'panel': {
         'backgroundColor': '#fff',
-        'width': '400px',
-        'height': '300px',
-        'top': '50%',
-        'left': '50%',
-        'marginTop': '-150px',
-        'marginLeft': '-200px',
         'borderRadius': '5px',
         'boxSizing': 'border-box',
         'boxShadow': '0 2px 4px rgba(0, 0, 0, 0.3)',
         'transform': 'translate3d(0, 0, 0)',
         'transition': 'transform 500ms cubic-bezier(0, 0, 0.25, 1), opacity 500ms cubic-bezier(0, 0, 0.25, 1)',
-        'zIndex': 10001
+        'zIndex': 10002
     },
     'panelHidden': {
         'transform': 'translate3d(-100px, 0, 0)',

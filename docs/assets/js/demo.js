@@ -33,25 +33,25 @@ export default class Demo extends Component {
                     <li><a href="javascript:void(0);" onClick={() => this.open('fadeInLeft')}>fadeInLeft</a></li>
                     <li><a href="javascript:void(0);" onClick={() => this.open('fadeInRight')}>fadeInRight</a></li>
                 </ul>
-                <Modal visible={this.state.fadeInDown} width="400" height="300" effect="fadeInDown" onClickAway={() => this.close('fadeInDown')}>
+                <Modal visible={this.state.fadeInDown} effect="fadeInDown" onClickAway={() => this.close('fadeInDown')}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInDown</h1>
                         <a href="javascript:void(0);" onClick={() => this.close('fadeInDown')}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInUp} width="500" height="300" effect="fadeInUp" onClickAway={() => this.close('fadeInUp')}>
+                <Modal visible={this.state.fadeInUp} effect="fadeInUp" onClickAway={() => this.close('fadeInUp')}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInUp</h1>
                         <a href="javascript:void(0);" onClick={() => this.close('fadeInUp')}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInLeft} width="600px" height="300px" effect="fadeInLeft" onClickAway={() => this.close('fadeInLeft')}>
+                <Modal visible={this.state.fadeInLeft} effect="fadeInLeft" onClickAway={() => this.close('fadeInLeft')}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInLeft</h1>
                         <a href="javascript:void(0);" onClick={() => this.close('fadeInLeft')}>Close</a>
                     </div>
                 </Modal>
-                <Modal visible={this.state.fadeInRight} width="80%" height="40%" effect="fadeInRight" styles={{backgroundColor: '#ccc'}} onClickAway={() => this.close('fadeInRight')}>
+                <Modal visible={this.state.fadeInRight} effect="fadeInRight" onClickAway={() => this.close('fadeInRight')}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInRight</h1>
                         <a href="javascript:void(0);" onClick={() => this.close('fadeInRight')}>Close</a>

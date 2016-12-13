@@ -138,9 +138,9 @@ embed {
     padding-top: 40px; }
 
 .Modal {
+  padding: 100px;
   text-align: center; }
   .Modal__title {
-    padding-top: 90px;
     font-size: 200%; }
 
 .Footer {

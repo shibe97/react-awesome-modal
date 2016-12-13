@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-modal",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "This is a React Modal Component.",
   "main": "./lib/index",
   "keywords": [
@@ -16,10 +16,11 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps-inline",
+    "build:src": "babel src --out-dir lib --source-maps-inline",
+    "build:docs": "browserify --debug --transform babelify docs/assets/js/app.js --outfile docs/assets/js/bundle.js",
     "watch": "babel src --out-dir lib --watch --source-maps-inline",
     "test": "mocha --compilers js:babel-core/register test/**/*.js",
-    "docs": "gulp build && open docs/index.html",
+    "docs": "open docs/index.html",
     "gulp": "gulp"
   },
   "repository": {
