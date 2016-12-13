@@ -33,7 +33,7 @@ export default class Demo extends Component {
                     <li><a href="javascript:void(0);" onClick={() => this.open('fadeInLeft')}>fadeInLeft</a></li>
                     <li><a href="javascript:void(0);" onClick={() => this.open('fadeInRight')}>fadeInRight</a></li>
                 </ul>
-                <Modal visible={this.state.fadeInDown} width="400" height="300" effect="fadeInDown" onClickAway={() => this.close('fadeInDown')}>
+                <Modal visible={this.state.fadeInDown} effect="fadeInDown" onClickAway={() => this.close('fadeInDown')}>
                     <div className="Modal">
                         <h1 className="Modal__title">FadeInDown</h1>
                         <a href="javascript:void(0);" onClick={() => this.close('fadeInDown')}>Close</a>
