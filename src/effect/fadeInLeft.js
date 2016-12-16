@@ -6,7 +6,7 @@ export default {
         'width': '100%',
         'height': '100%',
         'backgroundColor': 'rgba(0, 0, 0, 0.7)',
-        'zIndex': 10000
+        'zIndex': 10001
     },
     'maskHidden': {
         'display': 'none'
@@ -20,7 +20,7 @@ export default {
         'display': 'flex',
         'justifyContent': 'center',
         'alignItems': 'center',
-        'zIndex': 10001
+        'zIndex': 10000
     },
     'containerHidden': {
         'position': 'fixed',
