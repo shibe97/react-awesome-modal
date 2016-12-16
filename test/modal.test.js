@@ -12,9 +12,10 @@ describe('Modal', () => {
             </Modal>
         );
         const output = renderer.getRenderOutput();
+        console.log(output.props.children.props.children[0]);
         assert(
-          output.props.children[1].props.children.props.style.width === "600px" &&
-          output.props.children[1].props.children.props.style.height === "500px"
+          output.props.children.props.children[0].props.style.width === "600px" &&
+          output.props.children.props.children[0].props.style.height === "500px"
         );
     });
 });
