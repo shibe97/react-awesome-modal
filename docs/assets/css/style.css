@@ -53,14 +53,18 @@ pre, code, kbd, samp, tt {
 caption, th {
   text-align: left; }
 
-fieldset,
+fieldset {
+  padding: 10px 20px 25px;
+  border: 1px solid #39a7c5;
+  border-radius: 3px; }
+
 a img {
   border: none; }
 
 a {
   color: #39a7c5; }
 
-hr, legend {
+hr {
   display: none; }
 
 object,
@@ -103,6 +107,10 @@ embed {
   padding-top: 100px; }
   .Content__title {
     font-size: 200%; }
+  .Content__legend {
+    padding: 0 10px;
+    font-size: 120%;
+    color: #39a7c5; }
   .Content__description {
     color: #666; }
   .Content__step {
