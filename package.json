@@ -41,9 +41,9 @@
     "gulp-sass": "^2.3.2",
     "mocha": "~2.3.2",
     "power-assert": "~1.0.0",
-    "react": "^15.4.0",
-    "react-addons-test-utils": "^15.4.0",
-    "react-dom": "^15.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "bugs": {

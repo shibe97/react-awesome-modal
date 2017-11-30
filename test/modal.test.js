@@ -1,21 +1,19 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import TestRenderer from 'react-test-renderer';
 import assert from 'power-assert';
 import Modal from '../src/index';
-const renderer = TestUtils.createRenderer();
 
 describe('Modal', () => {
     it('the default unit is px.', () => {
-        renderer.render(
+        const renderer = TestRenderer.create(
             <Modal visible={true} width="600" height="500">
                 <p>this is a modal.</p>
             </Modal>
         );
-        const output = renderer.getRenderOutput();
-        console.log(output.props.children.props.children[0]);
+        const style = renderer.toJSON().children[0].children[0].props.style;
         assert(
-          output.props.children.props.children[0].props.style.width === "600px" &&
-          output.props.children.props.children[0].props.style.height === "500px"
+          style.width === "600px" &&
+          style.height === "500px"
         );
     });
 });
