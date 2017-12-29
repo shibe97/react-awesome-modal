@@ -55,8 +55,8 @@ export default class Examples extends Component {
 |:------------|:---------|:---------|:--------------------------------------------|:-----------------------------|
 | visible     | required | Boolean  | to show or hide the dialog                  | false                        |
 | effect      | option   | String   | to set how to pop-up                        | fadeInUp, fadeInDown, etc... |
-| width       | option   | String   | to set modal width (px or %)                | 500, 500px, 80%              |
-| height      | option   | String   | to set modal height (px or %)               | 400, 400px, 50%              |
+| width       | option   | String   | to set modal width                          | 500, 500px, 80%, auto        |
+| height      | option   | String   | to set modal height                         | 400, 400px, 50%, auto        |
 | onClickAway | option   | Function | to set actions when the user click the mask | -                            |
 
 ## Effect
