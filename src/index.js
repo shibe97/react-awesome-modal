@@ -21,11 +21,19 @@ export default class Modal extends Component {
     }
 
     setStyles(effect){
-        if (this.props && this.props.styles) {
-            style[effect].panel = {
-                ...style[effect].panel,
-                ...this.props.styles
-            };
+        if (this.props) {
+            if (this.props.styles) {
+                style[effect].panel = {
+                    ...style[effect].panel,
+                    ...this.props.styles
+                };
+            }
+            if (this.props.backgroundColor) {
+                style[effect].mask = {
+                    ...style[effect].mask,
+                    backgroundColor: this.props.backgroundColor
+                }
+            }
         }
     }
 
