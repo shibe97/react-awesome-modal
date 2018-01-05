@@ -71,7 +71,7 @@ export default class Modal extends Component {
                     <div style={this.state.visible ? {...this.state.style.panel} : this.state.style.panelHidden}>
                         {this.props.children}
                     </div>
-                    <div style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} onClick={this.props.onClickAway ? this.props.onClickAway : false} />
+                    <div style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} onClick={this.props.onClickAway ? this.props.onClickAway : null} />
                 </div>
             </div>
         );
