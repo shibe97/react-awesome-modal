@@ -24,10 +24,14 @@
         font-size: 200%;
     }
 
+    &__fieldset {
+      border-color: #f03;
+    }
+
     &__legend {
         padding: 0 10px;
         font-size: 120%;
-        color: #39a7c5;
+        color: #f03;
     }
 
     &__description {

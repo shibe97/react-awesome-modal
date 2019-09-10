@@ -107,10 +107,12 @@ embed {
   padding-top: 100px; }
   .Content__title {
     font-size: 200%; }
+  .Content__fieldset {
+    border-color: #f03; }
   .Content__legend {
     padding: 0 10px;
     font-size: 120%;
-    color: #39a7c5; }
+    color: #f03; }
   .Content__description {
     color: #666; }
   .Content__step {
