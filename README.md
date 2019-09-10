@@ -1,3 +1,11 @@
+# Deprecated
+This repository is deprecated.
+But I created a new modal package which uses react hooks.
+It's easier and more intuitive.
+Prease look at the new repository.
+
+https://github.com/shibe97/react-hooks-use-modal
+
 # react-awesome-modal
 [![Build Status](https://travis-ci.org/shibe97/react-awesome-modal.svg?branch=master)](https://travis-ci.org/shibe97/react-awesome-modal)
 
