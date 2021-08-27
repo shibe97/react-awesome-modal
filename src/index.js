@@ -30,36 +30,21 @@ export default class Modal extends Component {
     }
 
     setSize(effect) {
-        if (this.props && this.props.width) {
-            if (this.props.width.charAt(this.props.width.length-1) === '%') {
-                // Use Percentage
-                const width = this.props.width.slice(0, -1);
-                style[effect].panel.width = width + '%';
-
-            } else if (this.props.width.charAt(this.props.width.length-1) === 'x') {
-                // Use Pixels
-                const width = this.props.width.slice(0, -2);
-                style[effect].panel.width = width + 'px';
-
+        if (this.props.width) {
+            if (!isNaN(this.props.width)) {
+                // numeric values in Pixel
+                style[effect].panel.width = `${this.props.width}px`
             } else {
-                // Defaults
-                style[effect].panel.width = this.props.width + 'px';
+                style[effect].panel.width = this.props.width
             }
         }
-        if (this.props && this.props.height) {
-            if (this.props.height.charAt(this.props.height.length-1) === '%') {
-                // Use Percentage
-                const height = this.props.height.slice(0, -1);
-                style[effect].panel.height = height + 'vh';
-
-            } else if (this.props.height.charAt(this.props.height.length-1) === 'x') {
-                // Use Pixels
-                const height = this.props.height.slice(0, -2);
-                style[effect].panel.height = height + 'px';
-
-            } else {
-                // Defaults
-                style[effect].panel.height = this.props.height + 'px';
+        if (this.props.height) {
+            if (!isNaN(this.props.height)) {
+                // numeric values in Pixel
+                style[effect].panel.height = `${this.props.height}px`
+            }
+            else {
+                style[effect].panel.height = this.props.height
             }
         }
     }
