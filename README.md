@@ -59,13 +59,14 @@ export default class Examples extends Component {
 ```
 
 ## Props
-| Attribute   | Required | Type     | description                                 | example                      |
-|:------------|:---------|:---------|:--------------------------------------------|:-----------------------------|
-| visible     | required | Boolean  | to show or hide the dialog                  | false                        |
-| effect      | option   | String   | to set how to pop-up                        | fadeInUp, fadeInDown, etc... |
-| width       | option   | String   | to set modal width (px or %)                | 500, 500px, 80%              |
-| height      | option   | String   | to set modal height (px or %)               | 400, 400px, 50%              |
-| onClickAway | option   | Function | to set actions when the user click the mask | -                            |
+| Attribute       | Required | Type     | description                                 | example                      |
+|:----------------|:---------|:---------|:--------------------------------------------|:-----------------------------|
+| visible         | required | Boolean  | to show or hide the dialog                  | false                        |
+| effect          | option   | String   | to set how to pop-up                        | fadeInUp, fadeInDown, etc... |
+| width           | option   | String   | to set modal width (px or %)                | 500, 500px, 80%              |
+| height          | option   | String   | to set modal height (px or %)               | 400, 400px, 50%              |
+| backgroundColor | option   | String   | to set mask color                           | rgba(0, 0, 0, 0.7)           |
+| onClickAway     | option   | Function | to set actions when the user click the mask | -                            |
 
 ## Effect
 - fadeInDown [default]
